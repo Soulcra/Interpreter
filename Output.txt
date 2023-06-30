@@ -1,0 +1,90 @@
+Scanner Output:
+[Module(KEYWORD), Input(MODULE_IDENTIFIER), 
+(
+NEW_LINE), Sub(KEYWORD), Main(SUB_IDENTIFIER), ((LEFT_PARENTHESES), )(RIGHT_PARENTHESES), 
+(
+NEW_LINE), Dim(KEYWORD), n(INTEGER_IDENTIFIER), as(KEYWORD), Integer(KEYWORD), 
+(
+NEW_LINE), Dim(KEYWORD), s(INTEGER_IDENTIFIER), as(KEYWORD), Integer(KEYWORD), 
+(
+NEW_LINE), Dim(KEYWORD), a(INTEGER_IDENTIFIER), as(KEYWORD), Integer(KEYWORD), 
+(
+NEW_LINE), Dim(KEYWORD), b(INTEGER_IDENTIFIER), as(KEYWORD), Integer(KEYWORD), 
+(
+NEW_LINE), Dim(KEYWORD), x(INTEGER_IDENTIFIER), as(KEYWORD), Integer(KEYWORD), 
+(
+NEW_LINE), Dim(KEYWORD), p(INTEGER_IDENTIFIER), as(KEYWORD), Integer(KEYWORD), 
+(
+NEW_LINE), n(IDENTIFIER), =(EQUALS), 2(INTEGER_CONSTANT), 
+(
+NEW_LINE), s(IDENTIFIER), =(EQUALS), 0(INTEGER_CONSTANT), 
+(
+NEW_LINE), s(IDENTIFIER), =(EQUALS), s(IDENTIFIER), +(PLUS), n(IDENTIFIER), 
+(
+NEW_LINE), Console(KEYWORD), .(DOT), WriteLine(KEYWORD), ((LEFT_PARENTHESES), n(IDENTIFIER), )(RIGHT_PARENTHESES), 
+(
+NEW_LINE), Console(KEYWORD), .(DOT), WriteLine(KEYWORD), ((LEFT_PARENTHESES), s(IDENTIFIER), )(RIGHT_PARENTHESES), 
+(
+NEW_LINE), a(IDENTIFIER), =(EQUALS), 5(INTEGER_CONSTANT), 
+(
+NEW_LINE), b(IDENTIFIER), =(EQUALS), a(IDENTIFIER), 
+(
+NEW_LINE), b(IDENTIFIER), =(EQUALS), b(IDENTIFIER), /(SLASH), 2(INTEGER_CONSTANT), 
+(
+NEW_LINE), b(IDENTIFIER), =(EQUALS), b(IDENTIFIER), *(STAR), 2(INTEGER_CONSTANT), 
+(
+NEW_LINE), b(IDENTIFIER), =(EQUALS), a(IDENTIFIER), -(MINUS), b(IDENTIFIER), 
+(
+NEW_LINE), Console(KEYWORD), .(DOT), WriteLine(KEYWORD), ((LEFT_PARENTHESES), b(IDENTIFIER), )(RIGHT_PARENTHESES), 
+(
+NEW_LINE), x(IDENTIFIER), =(EQUALS), 0(INTEGER_CONSTANT), 
+(
+NEW_LINE), p(IDENTIFIER), =(EQUALS), 0(INTEGER_CONSTANT), 
+(
+NEW_LINE), x(IDENTIFIER), =(EQUALS), b(IDENTIFIER), *(STAR), p(IDENTIFIER), 
+(
+NEW_LINE), x(IDENTIFIER), =(EQUALS), x(IDENTIFIER), +(PLUS), x(IDENTIFIER), 
+(
+NEW_LINE), p(IDENTIFIER), =(EQUALS), p(IDENTIFIER), *(STAR), 10(INTEGER_CONSTANT), 
+(
+NEW_LINE), Console(KEYWORD), .(DOT), WriteLine(KEYWORD), ((LEFT_PARENTHESES), p(IDENTIFIER), )(RIGHT_PARENTHESES), 
+(
+NEW_LINE), End(KEYWORD), Main(IDENTIFIER), 
+(
+NEW_LINE), End(KEYWORD), Module(KEYWORD)]
+
+Parser Output:
+[
+StatementID: 1 Line#: 1, 
+StatementID: 2 Line#: 2, 
+StatementID: 4 Line#: 3, 
+StatementID: 4 Line#: 4, 
+StatementID: 4 Line#: 5, 
+StatementID: 4 Line#: 6, 
+StatementID: 4 Line#: 7, 
+StatementID: 4 Line#: 8, 
+StatementID: 6 Line#: 9, 
+StatementID: 6 Line#: 10, 
+StatementID: 17 Line#: 11, 
+StatementID: 12 Line#: 12, 
+StatementID: 12 Line#: 13, 
+StatementID: 6 Line#: 14, 
+StatementID: 5 Line#: 15, 
+StatementID: 29 Line#: 16, 
+StatementID: 25 Line#: 17, 
+StatementID: 20 Line#: 18, 
+StatementID: 12 Line#: 19, 
+StatementID: 6 Line#: 20, 
+StatementID: 6 Line#: 21, 
+StatementID: 24 Line#: 22, 
+StatementID: 17 Line#: 23, 
+StatementID: 25 Line#: 24, 
+StatementID: 12 Line#: 25, 
+StatementID: 14 Line#: 26, 
+StatementID: 14 Line#: 27]
+
+Interpreter Output:
+2
+2
+1
+0

@@ -1,0 +1,27 @@
+Module Input
+	Sub Main()
+		Dim n as Integer
+		Dim s as Integer
+		Dim a as Integer
+		Dim b as Integer
+		Dim x as Integer 
+		Dim p as Integer
+		n = 2
+		s = 0
+		s = s + n
+		Console.WriteLine(n)
+		Console.WriteLine(s)
+		a = 5
+		b = a
+		b = b / 2
+		b = b * 2
+		b = a - b
+		Console.WriteLine(b)
+		x = 0
+		p = 0
+		x = b * p
+		x = x + x
+		p = p * 10
+		Console.WriteLine(p)
+	End Main
+End Module

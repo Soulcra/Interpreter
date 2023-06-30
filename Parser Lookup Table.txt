@@ -1,0 +1,289 @@
+Grammar
+-------
+<program> -> <module>
+
+<module_block> -> Module ModuleID <module_items> End Module
+
+<module_items> -> <module_item> <module_item>
+               
+<module_item> -> <sub>
+              -> <function>
+
+<sub_block> -> Sub SubID <statements> ( <parameters> ) End Sub
+            -> Sub SubID <statements> ( ) End Sub
+
+<function_block> -> Function FunctionID <statements> ( <parameters> ) as <data_type>
+           -> Function FunctionID <statements> ( ) as <data_type>
+
+<parameters> -> <parameter>
+
+<parameter> -> DataID as <data_type>
+
+<data_type> -> Integer
+            -> Decimal
+            -> String
+            -> Boolean
+
+<statements> -> <statement>
+
+<statement> -> <assignment_statement>
+            -> <reassignment_statement>
+            -> <if_block>
+            -> <while_block>
+            -> <method_call>
+
+<assignment_statement> -> <modifiers> DataID as <data_type>
+
+<modifiers> -> <modifier>
+
+<modifier> -> Dim
+           -> Public
+
+<reassignment statement> -> DataID = DataID
+                         -> DataID = <data_literal>
+                         -> DataID = <method_call>
+                         -> DataID = DataID + DataID
+
+<data_literal> -> <integer_literal>
+               -> <decimal_literal>
+               -> <string_literal>
+               -> <boolean_literal>
+
+<if_block> -> If ( <expression> ) Then End If
+           -> If ( <expression> ) Then <statements> End If
+           -> If ( <expression> ) Then Else End If
+           -> If ( <expression> ) Then <statements> Else End If
+           -> If ( <expression> ) Then <statements> Else <statements> End If
+           -> If ( <expression> ) Then Else <statements> End If
+
+<while_block> -> While ( <expression> ) End While
+              -> While ( <expression> ) <statements> End While
+
+<method_call> -> <console_call>
+              -> <defined_call>
+
+<console_call> -> Console . WriteLine ( )
+               -> Console . WriteLine ( <data_literal> )
+               -> Console . WriteLine ( <data_literal> & <data_literal>)
+               -> Console . ReadLine ( )
+
+<defined_call> -> <function_call>
+               -> <sub_call>
+
+<function_call> -> FunctionID ( )
+                -> FunctionID ( <parameters> )
+
+<sub_call> -> SubID ( )
+           -> SubID ( <parameters> )
+
+Successful parsedIDs
+--------------------
+1: Module Block
+<module_block> -> Module ModuleID <module_items> End Module
+
+2: Sub Block
+<sub_block> -> Sub SubID <statements> ( <parameters> ) End Sub
+      -> Sub SubID <statements> ( ) End Sub
+
+3: Function Block
+<function_block> -> Function FunctionID <statements> ( <parameters> ) as <data_type>
+           -> Function FunctionID <statements> ( ) as <data_type>
+
+4: Assignment Statement
+<assignment_statement> -> <modifiers> DataID as <data_type>
+
+5: Reassignment with Variable
+<reassignment statement> -> DataID = DataID
+
+6: Reassignment with Literal
+<reassignment statement> -> DataID = <data_literal>
+
+7: Reassignment with Method
+<reassignment statement> -> DataID = <method_call>
+
+8: Reassignment with Console.ReadLine()
+<reassignment statement> -> DataID = <method_call>
+
+<method_call> -> <console_call>
+              -> <defined_call>
+
+<console_call> -> Console . ReadLine ( )
+
+9: Reassignment with Addition (constant + constant)
+<reassignment statement> -> DataID = DataID + DataID
+
+10: If Block
+<if_block> -> If ( <expression> ) Then End If
+           -> If ( <expression> ) Then <statements> End If
+           -> If ( <expression> ) Then Else End If
+           -> If ( <expression> ) Then <statements> Else End If
+           -> If ( <expression> ) Then <statements> Else <statements> End If
+           -> If ( <expression> ) Then Else <statements> End If
+
+11: While Block
+<while_block> -> While ( <expression> ) End While
+              -> While ( <expression> ) <statements> End While
+
+12: Console Call
+<console_call> -> Console . WriteLine ( )
+               -> Console . WriteLine ( <data_literal> )
+               -> Console . WriteLine ( <data_literal> & <data_literal>)
+
+13: Defined Call
+<defined_call> -> <function_call>
+               -> <sub_call>
+
+<function_call> -> FunctionID ( )
+                -> FunctionID ( <parameters> )
+
+<sub_call> -> SubID ( )
+           -> SubID ( <parameters> )
+
+14: End Line
+<module_block> -> Module ModuleID <module_items> End Module
+<sub_block> -> Sub SubID <statements> ( ) End Sub
+<if_block> -> If ( <expression> ) Then End If
+<while_block> -> While ( <expression> ) End While
+
+15: Exit Line
+An exit line skips to the end of the loop and ignore lines between it and the end
+
+16: Reassignment with Addition (constant + variable)
+<reassignment statement> -> DataID = DataID + DataID
+
+17: Reassignment with Addition (variable + variable)
+<reassignment statement> -> DataID = DataID + DataID
+
+18: Reassignment with Addition (variable + constant)
+<reassignment statement> -> DataID = DataID + DataID
+
+19: Reassignment with Subtraction (constant - variable)
+<reassignment statement> -> DataID = DataID - DataID
+
+20: Reassignment with Subtraction (variable - variable)
+<reassignment statement> -> DataID = DataID - DataID
+
+21: Reassignment with Subtraction (variable - constant)
+<reassignment statement> -> DataID = DataID - DataID
+
+22: Reassignment with Subtraction (constant - constant)
+<reassignment statement> -> DataID = DataID - DataID
+
+23: Reassignment with Multiplication (constant * variable)
+<reassignment statement> -> DataID = DataID * DataID
+
+24: Reassignment with Multiplication (variable * variable)
+<reassignment statement> -> DataID = DataID * DataID
+
+25: Reassignment with Multiplication (variable * constant)
+<reassignment statement> -> DataID = DataID * DataID
+
+26: Reassignment with Multiplication (constant * constant)
+<reassignment statement> -> DataID = DataID * DataID
+
+27: Reassignment with Division (constant / variable)
+<reassignment statement> -> DataID = DataID / DataID
+
+28: Reassignment with Division (variable / variable)
+<reassignment statement> -> DataID = DataID / DataID
+
+29: Reassignment with Division (variable / constant)
+<reassignment statement> -> DataID = DataID / DataID
+
+30: Reassignment with Division (constant / constant)
+<reassignment statement> -> DataID = DataID / DataID
+
+Error parsedIDs
+---------------
+1: Missing expected syntax in reassignment statement using variable/literal
+<reassignment statement> -> DataID = DataID
+                         -> DataID = <data_literal>
+
+2: Missing expected syntax in Console Call
+<console_call> -> Console . WriteLine ( )
+               -> Console . WriteLine ( <data_literal> )
+               -> Console . WriteLine ( <data_literal> & <data_literal>)
+               -> Console . ReadLine ( )
+
+3: Missing expected syntax in reassignment statement using method
+<reassignment statement> -> <method_call>
+
+<method_call> -> <defined_call>
+
+<defined_call> -> <function_call>
+               -> <sub_call>
+
+<function_call> -> FunctionID ( )
+                -> FunctionID ( <parameters> )
+
+<sub_call> -> SubID ( )
+           -> SubID ( <parameters> )
+
+4: Missing expected syntax in reassignment statement using addition
+<reassignment statement> -> DataID = DataID + DataID
+
+5: Missing expected syntax in reassignment statement with unspecified/generic use
+<reassignment statement> -> DataID = DataID
+                         -> DataID = <data_literal>
+                         -> DataID = <method_call>
+                         -> DataID = DataID + DataID
+                         -> DataID = DataID - DataID
+                         -> DataID = DataID * DataID
+                         -> DataID = DataID / DataID
+
+6: Missing expected syntax in method call
+<method_call> -> <defined_call>
+
+<defined_call> -> <function_call>
+               -> <sub_call>
+
+<function_call> -> FunctionID ( )
+                -> FunctionID ( <parameters> )
+
+<sub_call> -> SubID ( )
+           -> SubID ( <parameters> )
+
+7: Missing expected syntax in Module header
+<module_block> -> Module ModuleID <module_items> End Module
+
+8: Missing expected syntax in Function header
+<function_block> -> Function FunctionID <statements> ( <parameters> ) as <data_type>
+           -> Function FunctionID <statements> ( ) as <data_type>
+
+9: Missing expected syntax in assignment statement
+<assignment_statement> -> <modifiers> DataID as <data_type>
+
+10: Missing expected syntax in If Block
+<if_block> -> If ( <expression> ) Then End If
+           -> If ( <expression> ) Then <statements> End If
+           -> If ( <expression> ) Then Else End If
+           -> If ( <expression> ) Then <statements> Else End If
+           -> If ( <expression> ) Then <statements> Else <statements> End If
+           -> If ( <expression> ) Then Else <statements> End If
+
+11: Excess tokens in end line
+<module_block> -> Module ModuleID <module_items> End Module
+<sub_block> -> Sub SubID <statements> ( ) End Sub
+<if_block> -> If ( <expression> ) Then End If
+<while_block> -> While ( <expression> ) End While
+
+12: Missing expected syntax in Sub header
+<sub_block> -> Sub SubID <statements> ( <parameters> ) End Sub
+      -> Sub SubID <statements> ( ) End Sub
+
+13: Missing expected syntax in While Block
+<while_block> -> While ( <expression> ) End While
+              -> While ( <expression> ) <statements> End While
+
+14: Excess tokens in exit line
+
+15: Unknown/unexpected token
+
+16: Missing expected syntax in reassignment statement using subtraction
+<reassignment statement> -> DataID = DataID - DataID
+
+17: Missing expected syntax in reassignment statement using multiplication
+<reassignment statement> -> DataID = DataID * DataID
+
+18: Missing expected syntax in reassignment statement using division
+<reassignment statement> -> DataID = DataID / DataID

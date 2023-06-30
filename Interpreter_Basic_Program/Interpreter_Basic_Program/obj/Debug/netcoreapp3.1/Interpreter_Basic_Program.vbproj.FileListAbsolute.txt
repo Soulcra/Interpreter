@@ -1,0 +1,13 @@
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\bin\Debug\netcoreapp3.1\Interpreter_Basic_Program.exe
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\bin\Debug\netcoreapp3.1\Interpreter_Basic_Program.deps.json
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\bin\Debug\netcoreapp3.1\Interpreter_Basic_Program.runtimeconfig.json
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\bin\Debug\netcoreapp3.1\Interpreter_Basic_Program.runtimeconfig.dev.json
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\bin\Debug\netcoreapp3.1\Interpreter_Basic_Program.dll
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\bin\Debug\netcoreapp3.1\Interpreter_Basic_Program.pdb
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\obj\Debug\netcoreapp3.1\Interpreter_Basic_Program.vbprojAssemblyReference.cache
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\obj\Debug\netcoreapp3.1\Interpreter_Basic_Program.AssemblyInfoInputs.cache
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\obj\Debug\netcoreapp3.1\Interpreter_Basic_Program.AssemblyInfo.vb
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\obj\Debug\netcoreapp3.1\Interpreter_Basic_Program.vbproj.CoreCompileInputs.cache
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\obj\Debug\netcoreapp3.1\Interpreter_Basic_Program.dll
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\obj\Debug\netcoreapp3.1\Interpreter_Basic_Program.pdb
+F:\New Technology\Interpreter_Basic_Program\Interpreter_Basic_Program\obj\Debug\netcoreapp3.1\Interpreter_Basic_Program.genruntimeconfig.cache
